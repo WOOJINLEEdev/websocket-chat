@@ -130,6 +130,31 @@ table {
   border-spacing: 0;
 }
 
+button {
+  cursor: pointer;
+}
+
 .me {
   border-bottom-left-radius: 20px;
+}
+
+.visually_hidden {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+}
+
+.menu_hidden {
+  transform: translateX(100%);
+  transition: transform 0.5s ease;
+}
+
+.hide {
+  display: none;
 }

@@ -1,39 +1,38 @@
-import React from "react";
+import { useSetRecoilState } from "recoil";
 import styled from "styled-components";
 import { IoIosArrowBack } from "react-icons/io";
 import { BsThreeDots } from "react-icons/bs";
-import useMenuCollapsed from "hooks/useMenuCollapsed";
+
+import { menuState } from "components/Menu";
 
 const ChatHeader = () => {
-  const { data, mutate } = useMenuCollapsed();
+  const setMenuShow = useSetRecoilState(menuState);
 
   const handleMenuClick = () => {
-    mutate(!data);
+    setMenuShow((prev) => !prev);
   };
 
   return (
     <Header>
-      <Button type="button">
+      <Button type="button" aria-label="Go Back">
         <IoIosArrowBack />
-        <span className="visually_hidden">나가기</span>
       </Button>
 
       <h1>User</h1>
 
-      <Button type="button" onClick={handleMenuClick}>
+      <Button type="button" onClick={handleMenuClick} aria-label="Menu">
         <BsThreeDots />
-        <span className="visually_hidden">메뉴</span>
       </Button>
     </Header>
   );
 };
 
-export default React.memo(ChatHeader);
+export default ChatHeader;
 
 const Header = styled.header`
   display: flex;
   height: 60px;
-  color: #fff;
+  color: #ffffff;
   background: green;
   border: 0;
   font-size: 15px;
@@ -59,7 +58,7 @@ const Button = styled.button`
   padding: 0;
 
   & svg {
-    fill: #fff;
+    fill: #ffffff;
     width: 20px;
     height: 20px;
     margin: 20px 0;

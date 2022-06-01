@@ -1,17 +1,16 @@
-import LoadingImg from "images/Fading circles.gif";
 import styled from "styled-components";
 
 const Loading = () => {
   return (
-    <LoadingWrap>
-      <img src={LoadingImg} alt="Loading..." />
-    </LoadingWrap>
+    <DivContainer>
+      <img src="assets/images/fading-circles.gif" alt="Loading..." />
+    </DivContainer>
   );
 };
 
 export default Loading;
 
-const LoadingWrap = styled.div`
+const DivContainer = styled.div`
   position: fixed;
   display: block;
   overflow: hidden;
@@ -20,7 +19,7 @@ const LoadingWrap = styled.div`
   top: 0px;
   left: 0px;
   opacity: 0.7;
-  background-color: #fff;
+  background-color: #ffffff;
   text-align: center;
   z-index: 99;
 

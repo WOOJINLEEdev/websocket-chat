@@ -70,7 +70,7 @@ const MenuTitle = styled.h2`
   padding: 30px 20px;
   font-size: 35px;
   font-weight: bold;
-  text-shadow: 2px 2px 2px grey;
+  text-shadow: 2px 2px 2px #808080;
 `;
 
 const MenuList = styled.ul``;
@@ -90,6 +90,6 @@ const MenuItem = styled.li`
 
   &:active {
     font-weight: bold;
-    color: green;
+    color: #008000;
   }
 `;

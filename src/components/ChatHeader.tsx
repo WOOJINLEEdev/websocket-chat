@@ -33,7 +33,7 @@ const Header = styled.header`
   display: flex;
   height: 60px;
   color: #ffffff;
-  background: green;
+  background: #008000;
   border: 0;
   font-size: 15px;
   font-weight: bold;
@@ -53,15 +53,15 @@ const Header = styled.header`
 const Button = styled.button`
   width: 15%;
   height: 100%;
-  background: green;
-  border: 0;
   padding: 0;
+  border: 0;
+  background: #008000;
 
   & svg {
-    fill: #ffffff;
     width: 20px;
     height: 20px;
     margin: 20px 0;
+    fill: #ffffff;
   }
 
   @media only screen and (min-width: 768px) {
